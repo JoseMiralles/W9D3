@@ -1,0 +1,28 @@
+body>h1{
+    display: flex;
+    justify-content: center;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0px;
+}
+.square{
+    width: 90px;
+    height: 90px;
+    border: 5px solid black;
+}
+
+.grey{
+    background-color: grey;
+}
+
+.grey:hover{
+    background: yellow;
+}
+
+.clicked{
+    background: white;
+}
