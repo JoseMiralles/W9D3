@@ -29,3 +29,13 @@ body>h1{
 .clicked{
     background: white;
 }
+
+.winner{
+    background: green;
+    color: white;
+}
+
+.looser{
+    color: red;
+    background: white;
+}

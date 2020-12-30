@@ -15,7 +15,25 @@ class View {
   makeMove(e) {
     this.game.playMove(e);
     if (this.game.isOver()){
-      console.log("WON");
+      // Set winner font to white
+      // Set winner squares to green
+
+      // Set looser font to red
+      // Set remaining squares to white
+
+      // print: You win {mark}
+
+      const game = this.game;
+      $(".square").each(function(){
+        const square = $(this);
+        if (square.text() === game.winner()){
+          square.addClass("winner");
+        } else {
+          square.removeClass("grey");
+          square.addClass("looser");
+        }
+      });
+      $("#message").text(`You are the winner, ${game.winner()}!`);
     }
   }
 
