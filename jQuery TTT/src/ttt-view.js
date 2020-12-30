@@ -16,7 +16,10 @@ class View {
     for (let i = 0; i < 3; i++){
       const row = $("<ul class='row'></ul>");
       for (let x = 0; x < 3; x++){
-        row.append("<li class='square grey'></li>");
+        const square = $("<li class='square grey'></li>");
+        square.attr("row", i);
+        square.attr("col", x);
+        row.append(square);
       }
       this.$el.append( row );
     }
