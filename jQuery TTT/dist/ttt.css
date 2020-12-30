@@ -10,9 +10,12 @@ body>h1{
     margin: 0px;
 }
 .square{
+    display: flex;
     width: 90px;
     height: 90px;
     border: 5px solid black;
+    font-size: 5rem;
+    justify-content: center;
 }
 
 .grey{

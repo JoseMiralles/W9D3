@@ -7,11 +7,17 @@ class View {
   }
 
   bindEvents() {
-    
-    $(".square").on("click", this.game.playMove.bind(this.game));
+    $(".square").on("click", (e) => {
+      this.makeMove(e);
+    });
   }
 
-  makeMove($square) {}
+  makeMove(e) {
+    this.game.playMove(e);
+    if (this.game.isOver()){
+      console.log("WON");
+    }
+  }
 
   setupBoard() {
     for (let i = 0; i < 3; i++){

@@ -29,12 +29,14 @@ class Board {
     return true;
   }
 
-  placeMark(pos, mark) {
+  placeMark(pos, mark, square) {
     if (!this.isEmptyPos(pos)) {
       throw new MoveError('Is not an empty position!');
     }
 
     this.grid[pos[0]][pos[1]] = mark;
+    square.text(mark);
+    square.toggleClass("grey", "clicked");
   }
 
   print() {

@@ -35,6 +35,7 @@ class Board {
     }
 
     this.grid[pos[0]][pos[1]] = mark;
+    
   }
 
   print() {

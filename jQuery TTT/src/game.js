@@ -12,9 +12,8 @@ class Game {
   }
 
   playMove(e) {
-      
-      const square = $(e.target)
-      const pos = [square.attr("row"), square.attr("col")]
+    const square = $(e.target)
+    const pos = [square.attr("row"), square.attr("col")]
    
     this.board.placeMark(pos, this.currentPlayer, square);
 
