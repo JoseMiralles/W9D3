@@ -3,7 +3,7 @@ const MoveError = require("./moveError");
 
 class Game {
   constructor() {
-    this.board = $("square");
+    this.board = new Board();
     this.currentPlayer = Board.marks[0];
   }
 
@@ -12,8 +12,12 @@ class Game {
   }
 
   playMove(e) {
-      debugger
-    this.board.placeMark(pos, this.currentPlayer);
+      
+      const square = $(e.target)
+      const pos = [square.attr("row"), square.attr("col")]
+    debugger
+    this.board.placeMark(pos, this.currentPlayer, square);
+
     this.swapTurn();
   }
 

@@ -7,7 +7,7 @@ class View {
   }
 
   bindEvents() {
-    $(".square").on("click", this.game.playMove);
+    $(".square").on("click", this.game.playMove.bind(this.game));
   }
 
   makeMove($square) {}
