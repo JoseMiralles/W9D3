@@ -15,7 +15,7 @@ class Game {
       
       const square = $(e.target)
       const pos = [square.attr("row"), square.attr("col")]
-    debugger
+   
     this.board.placeMark(pos, this.currentPlayer, square);
 
     this.swapTurn();
